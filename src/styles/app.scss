@@ -1,0 +1,30 @@
+@import 'utils/variables';
+@import 'components/type';
+@import '../../node_modules/modern-normalize/modern-normalize';
+
+@font-face {
+    font-family: 'PPEiko-Medium';
+    src: url('/assets/fonts/PPEiko-Medium.woff2') format('woff2'),
+         url('/assets/fonts/PPEiko-Medium.woff') format('woff'),
+         url('/assets/fonts/PPEiko-Medium.ttf')  format('truetype');
+  }
+
+@font-face {
+    font-family: 'PPPangramSans-Regular';
+    src: url('/assets/fonts/PPPangramSans-Regular.woff2') format('woff2'),
+         url('/assets/fonts/PPPangramSans-Regular.woff') format('woff'),
+         url('/assets/fonts/PPPangramSans-Regular.ttf')  format('truetype');
+  }
+
+@font-face {
+    font-family: 'PPPangramSans-Medium';
+    src: url('/assets/fonts/PPPangramSans-Medium.woff2') format('woff2'),
+         url('/assets/fonts/PPPangramSans-Medium.woff') format('woff'),
+         url('/assets/fonts/PPPangramSans-Medium.ttf')  format('truetype');
+  }
+
+
+  body {
+    font-family: 'PPPangramSans-Regular';
+  }
+  
