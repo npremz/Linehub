@@ -141,6 +141,11 @@ body {
         position: absolute;
 
     }
+
+    &--cs {
+        background-image: url(../assets/images/headercs.jpg);
+        background-image: image-set(url(../assets/images/headercs@2x.jpg) 1x, url(../assets/images/headercs@2x.jpg) 2x);
+    }
 }
 
 .footer {
@@ -471,7 +476,6 @@ button {
     }
 
     .header {
-        background-image: url(../assets/images/headerDeskop.jpg);
         height: 590px;
         background-position: 10% 10%;
         background-size: cover;
