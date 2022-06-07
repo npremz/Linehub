@@ -359,6 +359,7 @@ a {
     height: 48px;
     border-radius: 24px;
     border: #E95549 1px solid;
+    transition: 0.15s;
 
     &:hover {
         background-color: #E95549;
@@ -376,6 +377,10 @@ a {
 
 .link--footer {
     margin-bottom: 30px;
+
+    &:hover {
+        margin-left: 5px;
+    }
 }
 
 /***********************************************/
@@ -492,6 +497,31 @@ button {
     white-space: nowrap;
     position: absolute; 
 }
+
+@media (min-width: 430px) {
+    .section {
+        max-width: 430px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .bar-wide {
+        &:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .bar-thin{
+        &:after {
+            width: 95vw;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+}
+
+
 
 @media (min-width: 950px) {
 
@@ -629,6 +659,12 @@ button {
 
     .bar-thin {
 
+        &:after {
+            width: 948px;
+            left: auto;
+            transform: none;
+        }
+
         &--gauche:after {
             height: calc(100% + 22px);
             width: 1px;
@@ -657,6 +693,7 @@ button {
             right: auto;
             left: 0;
         }
+
     }
 
 
