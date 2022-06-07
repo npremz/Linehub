@@ -6,7 +6,26 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-console.log(gsap.version);
+const boutonUser1 = document.querySelector("#bouton1");
+const boutonUser2 = document.querySelector("#bouton2");
+const imageUser = document.querySelector("#image-user");
+
+if (boutonUser1 && boutonUser2 && imageUser) {
+boutonUser1.addEventListener("click", (e) => {
+    boutonUser1.classList.add("section__button--active");
+    boutonUser2.classList.remove("section__button--active");
+    imageUser.setAttribute('src', 'assets/images/user1.jpg');
+    imageUser.setAttribute('srcset', 'assets/images/user1.jpg 1x, assets/images/user1@2x.jpg 2x');
+})
+
+boutonUser2.addEventListener("click", (e) => {
+    boutonUser1.classList.remove("section__button--active");
+    boutonUser2.classList.add("section__button--active");
+    imageUser.setAttribute('src', 'assets/images/user2.jpg')
+    imageUser.setAttribute('srcset', 'assets/images/user2.jpg 1x, assets/images/user2@2x.jpg 2x');
+})
+
+}
 
 let ruleBodyBefore = CSSRulePlugin.getRule("body:before");
 let ruleBodyAfter = CSSRulePlugin.getRule("body:after");
@@ -18,6 +37,8 @@ let ruleBarWideAfter4 = CSSRulePlugin.getRule(".bar-wide-4:after");
 
 
 // Intro
+
+if (document.querySelector(".section-1")) {
 
 const tlintro = gsap.timeline({defaults: {duration: 0.5}})
 
@@ -131,3 +152,5 @@ gsap.timeline({
         opacity: 0,
         duration: 0.3,
     })
+
+}

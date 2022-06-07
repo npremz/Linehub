@@ -122,6 +122,7 @@ body {
         width: 2px;
         background-color: #545454;
         margin-top: 70px;
+        overflow: hidden;
     }
 
     &--small-elem {
@@ -132,6 +133,25 @@ body {
         margin-top: -30px;
     }
 
+    &--small-elem:before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 8px;
+        top: 30px;
+        background-color: #F6F6F6;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: topslide 1.6s ease-in forwards infinite ;
+    }
+
+    &__logo {
+        top: 70px;
+        left: 50px;
+        position: relative;
+        width: 125px;
+    }
+
     &:after {
         content: "";
         height: 1px;
@@ -139,14 +159,26 @@ body {
         background-color: #474747;
         bottom: -1px;
         position: absolute;
-
+        left: 0;
     }
 
     &--cs {
         background-image: url(../assets/images/headercs.jpg);
         background-image: image-set(url(../assets/images/headercs@2x.jpg) 1x, url(../assets/images/headercs@2x.jpg) 2x);
+        background-position-x: 0%;
     }
 }
+
+@keyframes topslide {
+    0% {
+      top: 22px;
+    }
+  
+    100% {
+        top: 100px;
+    }
+  }
+  
 
 .footer {
     &--small {
@@ -271,6 +303,11 @@ ul {
         height: 100%;
         left: 50%;
         transform: translateX(-50%);
+    
+        &--logof {
+            height: auto;
+            width: 100%;
+        }
     }
 }
 
@@ -321,8 +358,12 @@ a {
     padding-left: 30px;
     height: 48px;
     border-radius: 24px;
-    background-color: #E95549;
-    
+    border: #E95549 1px solid;
+
+    &:hover {
+        background-color: #E95549;
+    }
+
     div {
         position: relative;
         margin-top: -7px;
@@ -350,17 +391,20 @@ button {
 }
 
 .section__button {
-    margin-top: -21px;
     height: 130px;
     font-family: 'PPPangramSans-Medium';
     color: #F6F6F6;
     border-bottom: 1px solid #474747;
     letter-spacing: 0.05em;
     width: 100%;
+    cursor: pointer;
 
     &--var {
-        margin-top: 0;
         border-bottom: none;
+    }
+
+    &--active {
+        background-color: #E95549;
     }
 }
 
@@ -437,6 +481,18 @@ button {
     }
 }
 
+.logo {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+
+.hidden {
+    text-indent: 100%;
+    white-space: nowrap;
+    position: absolute; 
+}
+
 @media (min-width: 950px) {
 
     body {
@@ -480,6 +536,10 @@ button {
         background-position: 10% 10%;
         background-size: cover;
         max-width: none;
+
+        &--cs {
+            background-position-x: 50%;
+        }
     }
 
     .section {
@@ -546,6 +606,10 @@ button {
 
     .boite-image--portrait {
         height: 530px;
+    }
+
+    .boite-image--paper {
+        height: 540px;
     }
 
     .boite-user {
