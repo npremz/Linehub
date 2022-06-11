@@ -269,6 +269,10 @@ ul {
         }
     }
 
+    &--credits {
+        margin-top: 0;
+    }
+
     &--footer {
         margin-top: 35px;
         margin-left: 100px;
@@ -367,7 +371,7 @@ a {
 
     div {
         position: relative;
-        margin-top: -7px;
+        transform: translateY(-32%);
     }
 }
 
@@ -608,7 +612,7 @@ button {
         margin-right: 50px;
 
         .p--bottom {
-            margin: 0;
+            margin-bottom: 0;
             padding: 0;
         }
 
@@ -640,6 +644,10 @@ button {
 
     .boite-image--paper {
         height: 540px;
+    }
+
+    .boite-image--credits {
+        height: 100%;
     }
 
     .boite-user {
